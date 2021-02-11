@@ -24,7 +24,7 @@ def predict():
 		data = [message]
         #data = cv.transform([message])
         #vect = cv(data).toarray()
-		my_prediction = news_model.predict(cv.transform([message]))
+		my_prediction = news_model.predict(cv.transform(data))
 		if(my_prediction[0] == 1):
     			output = "ITS A SPAM!"
 		elif(my_prediction[0] == 0):
