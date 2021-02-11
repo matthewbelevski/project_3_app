@@ -26,9 +26,9 @@ def predict():
         #vect = cv(data).toarray()
 		my_prediction = news_model.predict(cv.transform(data))
 		if(my_prediction[0] == 1):
-    			output = "ITS A SPAM!"
+    			output = "You are fake news"
 		elif(my_prediction[0] == 0):
-    			output = "NOT A SPAM"
+    			output = "The real deal"
 	return render_template('index.html',prediction_text = output)
 
 
