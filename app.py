@@ -26,9 +26,9 @@ def predict():
         #vect = cv(data).toarray()
 		my_prediction = news_model.predict(cv.transform(data))
 		if(my_prediction[0] == 1):
-    			output = "You are fake news"
+    			output = "static/fake_news_trump.jpg"
 		elif(my_prediction[0] == 0):
-    			output = "The real deal"
+    			output = "static/real_news_trump.jpg"
 	return render_template('index.html',prediction_text = output)
 
 
