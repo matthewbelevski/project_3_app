@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html >
-<!--From https://codepen.io/frytyler/pen/EGdtg-->
 <head>
   <meta charset="UTF-8">
   <title>Real or Fake</title>
-  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   
 </head>
 
 <body>
- <div class="login">
-	<h1>Is it real or fake news?</h1>
+  <div class="container" style="padding-top:200px;">
 
+    <div class="row" style="background:white">
+      <div class="col-md-12 jumbotron text-center jumbocolour">
+    <h1>Is it real or fake news?</h1>
+    <br>
+    <p>Enter in a headline from a news article to predict whether it is real or fake</p>
+      </div>
+    </div>
+    <div class="row" style="background:white">
+      <div class="col-md-12 text-center">
+       <div class="login ">
      <!-- Main Input For Receiving Query to our ML -->
-    <form action="{{ url_for('predict')}}"method="post">
-      <input type="text" name="interview_score3" placeholder="Input Text to classify" required="required" /><br>
+       <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="interview_score3" placeholder="Input news headline to classify" required="required" /><br>
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
-
-   <br>
-   <br>
-    
-   
- </div>
+      </div>
+      </div>
+    </div>
+ <div class="row" style="padding-top: 10px;">
+ <div class="col-md-12 text-center">
  <div class="predict">
  <!-- <img src="{{url_for('static', filename='{{prediction_text}}')}}" align="middle" />-->
-  <img src="{{prediction_text}}" alt="" style="width:300px";>
+  <img src="{{prediction_text}}" alt="" style="width:500px";>
 <!-- {{prediction_text}}-->
+</div>
   </div>
+</div>
 </div>
 </body>
 </html>
