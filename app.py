@@ -29,7 +29,7 @@ def predict():
     			output = "static/real_news_trump.jpg"
 		elif(my_prediction[0] == 0):
     			output = "static/fake_news_trump.jpg"
-	return render_template('index.html',prediction_text = output)
+	return render_template('index.html',prediction_text = output, headline = "Most recent headline:", headline2 = message)
 
 
 

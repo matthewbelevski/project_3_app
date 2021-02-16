@@ -21,6 +21,11 @@ body {
 	background: #fff;
 }
 
+.headline{
+	font-size: 18px;
+	font-family: Georgia;
+}
+
 #h1 {
 	color:aqua;
 }
