@@ -26,12 +26,14 @@ def predict():
         #vect = cv(data).toarray()
 		my_prediction = news_model.predict(cv.transform(data))
 		if(my_prediction[0] == 1):
-    			output = "static/real_news_trump.jpg"
+    			output = "static/real_news.gif"
 		elif(my_prediction[0] == 0):
-    			output = "static/fake_news_trump.jpg"
+    			output = "static/fake_news.gif"
 	return render_template('index.html',prediction_text = output, headline = "Most recent headline:", headline2 = message)
 
+@app.route('/exploratory')
 
+def exploratory():return render_template('exploratory.html')
 
 if __name__ == '__main__':
 	app.run(debug=True)
