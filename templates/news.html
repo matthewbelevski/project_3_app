@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Real or Fake</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+ 
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: white;">
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="navbar-brand homebutton-hover" style= "color:black;font-style:Georgia" href="/">Home</a>
+        <a class="navbar-brand homebutton-hover" style= "color:black;font-style:Georgia" href="exploratory">Explore Data</a>
+        <a class="navbar-brand homebutton-hover" style= "color:black;font-style:Georgia" href="news"><u>News Links</u></a>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="container">    
+
+  <div class="row" style = "font-family: Georgia; padding-top: 100px;">
+
+  <div class="col-md-6">
+
+  <table class="table" style = "background: white;">
+    <thead>
+      <tr>
+        <th scope="col" style = "font-size: 40px;">Real News Website Links</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row "style = "height: 200px;">
+          <a href="https://www.theaustralian.com.au/">
+          <img alt="The Australian" src="static/the-australian-newspaper-article-on-mek.jpg"
+          width=500">
+       </a></th>
+      </tr>
+      <tr>
+        <th scope="row" style = "height: 200px;">
+          <a href="https://www.theage.com.au/">
+            <img alt="The Age" src="static/the_age.png"
+            width=500">
+        </th>
+      </tr>
+      <tr>
+        <th scope="row" style = "height: 200px;">
+          <a href="https://www.nytimes.com/">
+            <img alt="New York Times" src="static/ny_times.jpeg"
+            width=500">
+        </th>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  <div class="col-md-6">
+    
+  <table class="table" style = "background: white;">
+    <thead>
+      <tr>
+        <th scope="col" style = "font-size: 40px;">Fake News Website Links</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row" style = "height: 200px;">
+          <a href="https://www.theonion.com/">
+            <img alt="The Onion" src="static/theonion.png"
+            width=500">
+        </th>
+      </tr>
+      <tr>
+        <th scope="row" style = "height: 200px;">
+          <a href="https://www.betootaadvocate.com/">
+          <img alt="Betoota Advocate" src="static/Betoota-Advocate.png"
+          width=500">
+       </a></th>
+      </tr>
+      <tr>
+        <th scope="row" style = "height: 200px;">
+          <a href="https://babylonbee.com/">
+            <img alt="The Babylon Bee" src="static/babylonbee.png"
+            width=500">
+        </th>
+      </tr>
+    </tbody>
+  </table>
+
+    </div>
+  </div>
+</div>
+ 
+
+</body>
+</html>

@@ -35,5 +35,9 @@ def predict():
 
 def exploratory():return render_template('exploratory.html')
 
+@app.route('/news')
+
+def news():return render_template('news.html')
+
 if __name__ == '__main__':
 	app.run(debug=True)

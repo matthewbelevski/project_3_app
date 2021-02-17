@@ -5,6 +5,8 @@
   <title>Real or Fake</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<!-- Google API loader -->
+<script src="https://apis.google.com/js/api.js?mods=enable_cloud_search_widget&onload=onLoad" async defer></script>
   
 </head>
 
@@ -15,20 +17,21 @@
       <div class="navbar-nav">
         <a class="navbar-brand homebutton-hover" style= "color:black;font-style:Georgia" href="/"><u>Home</u></a>
         <a class="navbar-brand homebutton-hover" style= "color:black;font-style:Georgia" href="exploratory">Explore Data</a>
+        <a class="navbar-brand homebutton-hover" style= "color:black;font-style:Georgia" href="news">News Links</a>
       </div>
     </div>
   </nav>
 
-  <div class="container" style="padding-top:200px;">
+  <div class="container" style="padding-top:70px;">
 
     <div class="row" style="background:white">
-      <div class="col-md-12 jumbotron text-center jumbocolour">
+      <div class="col-md-12 text-center jumbocolour"style="padding-bottom:50px;">
     <h1>IS IT REAL OR FAKE NEWS?</h1>
     <br>
     <p>Enter in a headline from a news article to predict whether it is real or fake</p>
       </div>
     </div>
-    <div class="row" style="background:white">
+    <div class="row" style="background:white; opacity: 0.9;">
       <div class="col-md-12 text-center">
        <div class="login ">
      <!-- Main Input For Receiving Query to our ML -->
@@ -40,23 +43,43 @@
       </div>
     </div>
   </div>
-    <div class="row" style="background:white">
+    <div class="row" style="background:white; opacity: 0.9;">
       <div class="col-md-12 text-center headline">
     <p><b>{{headline}}</b></p>
     <p style="padding-bottom: 10px;">{{headline2}}</p>
   </div>
 </div>
  <div class="row" style="padding-top: 10px;">
- <div class="col-md-12 text-center">
+ <div class="col-md-12 text-center" style="padding-bottom: 15px">
  <div class="predict">
  <!-- <img src="{{url_for('static', filename='{{prediction_text}}')}}" align="middle" />-->
-  <img src="{{prediction_text}}" alt="" style="width:500px";>
+  <img src="{{prediction_text}}" alt="" style="width:500px;">
 
 <!-- {{prediction_text}}-->
+
+ </div>
 </div>
+</div>
+<div class="row">
+
+  <div class="col-md-12 text-center" style="text-align: center; background:white; opacity: 0.9; padding-top:20px; padding-bottom:10px; font-family: Georgia">
+    <h2>News Check</h2>
+    <p>Use the search bar below to find out the origins of the headline</p>
+
+  <form method="get" action="https://www.google.com/search?q=" class="searchform" method="get" name="searchform" target="_blank">
+    <input type="text" name="q" size="31" value="{{headline2}}">
+    <button class="button" type="submit">Search</button>
+    </form>
+
+</div>
+</div>
+</div>
+  
   </div>
 </div>
 </div>
 </div>
 </body>
+
+
 </html>
